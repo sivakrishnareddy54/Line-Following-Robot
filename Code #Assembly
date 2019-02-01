@@ -1,0 +1,13 @@
+org 000h
+mov P0, #0ffh
+mov P2, #00h
+read:
+mov a, P0
+anl a, #01h
+cjne a, #00h, Right
+mov P2, #05h
+sjmp read
+Right:
+mov P2, #0Ah
+sjmp read
+end
