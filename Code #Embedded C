@@ -1,0 +1,14 @@
+#include<reg52.h>
+void main ()
+{
+ p1=0xff;
+ p2=0x00;
+ while (1)
+ {
+ p1= p1 & 0x01;
+ if (p1 == 0x00)
+ p2 = 0x05; //left
+ If (p1 == 0x01)
+ p2 = 0x0a; //right
+ }
+}
